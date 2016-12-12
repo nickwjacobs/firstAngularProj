@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+ <head>
+   <meta charset="utf-8">
+   <title>My First Angular Page!</title>
+ </head>
+ <body ng-controller="mainCtrl">
+
+   <input type="text" ng-model="test" />
+
+   <input type="text" ng-model="newName" placeholder="Enter Name" />
+   <input type="text" ng-model="newColor" placeholder="Enter Color"/>
+   <button type="button" name="button" ng-click="(addGuest())">Add Guest</button>
+   <div>
+     <p ng-repeat="guest in guests">{{guest.name}} favorite color is {{guest.color}}</p>
+   </div>
+
+   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.js"></script>
+   <script type="text/javascript" src="./app.js"></script>
+   <script type="text/javascript" src="./mainCtrl.js"></script>
+ </body>
+</html>
